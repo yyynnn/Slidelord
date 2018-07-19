@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "plugins": ["import", "react", "prettier"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "generators": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "settings": {
+    "import/ignore": [
+      "node_modules",
+      "\\.(json|css|jpg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm)$"
+    ],
+    "import/extensions": [".js"],
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".json"]
+      }
+    }
+  },
+  "rules": {
+    "react/jsx-uses-react": "error",
+    "prettier/prettier": ["error", { "semi": false, "singleQuote": true }],
+    "react/jsx-uses-vars": "error",
+    "no-undef": "error",
+    "quotes": [2, "single"],
+    "import/no-unresolved": [0, { "commonjs": true, "amd": true }],
+    "import/default": 2,
+    "import/export": 2,
+    "require-jsdoc": "off",
+    "no-invalid-this": "off",
+    "semi": ["error", "never"]
+  }
+}
